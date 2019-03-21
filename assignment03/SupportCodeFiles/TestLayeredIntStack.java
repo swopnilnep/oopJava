@@ -56,49 +56,49 @@ public class TestLayeredIntStack
 
             LayeredIntStack L = new LayeredIntStack();
 
-            printStatus("L", L); // working
+            printStatus("L", L);
 
             L.exitLayer();
-
-            printStatus("L", L); // working
-
-            L.pop();
-
-            printStatus("L", L); // working
-
-            L.push(111);
-
-            printStatus("L", L); // working
-
-            L.push(222);
-
-            printStatus("L", L); // working
-            // 6
-            L.push(333);
-            
-            printStatus("L", L); // working
-            // 7
-            L.enterLayer();
-
-            printStatus("L", L); // working
-
-            L.exitLayer();
-
-            printStatus("L", L); // working
-
-            L.pop();
-
-            printStatus("L", L); // working
-
-            L.push(444);
-
-            printStatus("L", L); // working
-
-            L.enterLayer();
 
             printStatus("L", L);
 
             L.pop();
+
+            printStatus("L", L);
+
+            L.push(111);
+
+            printStatus("L", L);
+
+            L.push(222);
+
+            printStatus("L", L);
+            // 6
+            L.push(333);
+            
+            printStatus("L", L);
+            // 7
+            L.enterLayer();
+
+            printStatus("L", L);
+
+            L.exitLayer(); // 333
+
+            printStatus("L", L);
+
+            L.pop(); // 222
+
+            printStatus("L", L);
+
+            L.push(444); // 444
+
+            printStatus("L", L);
+
+            L.enterLayer(); // 214...
+
+            printStatus("L", L);
+
+            L.pop(); // pop from an empty layer
 
             printStatus("L", L);
 
