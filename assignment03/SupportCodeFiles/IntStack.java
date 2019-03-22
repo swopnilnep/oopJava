@@ -51,7 +51,7 @@ public class IntStack
     // Private Mutators
     //
 
-        protected void setError(boolean otherLastOperationCausedError)
+        private void setError(boolean otherLastOperationCausedError)
         {
 
             myLastOperationCausedError = otherLastOperationCausedError;
